@@ -1,0 +1,151 @@
+/* ---------------ALL--------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Orbitron, sans-serif;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+span {
+  font-weight: bold;
+}
+
+/* ---------------GRILLA--------------- */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  height: 100%;
+}
+
+.box-item {
+  grid-area: main;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  overflow: scroll;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+}
+
+main p {
+  font-weight: bold;
+  font-size: x-large;
+  color: rgb(230, 123, 0);
+  text-shadow: 3px black;
+}
+
+/* ---------------FOOTER--------------- */
+
+footer {
+  grid-area: footer;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-image: linear-gradient(rgb(140, 40, 49), rgba(140, 40, 40, 0.9));
+}
+
+/* ---------------BUTTON--------------- */
+
+.grid-item input {
+  background-color: rgb(140, 40, 49);
+  color: white;
+  width: 10rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  font-size: large;
+  font-weight: 400;
+}
+
+.grid-item input:hover {
+  background-color: grey;
+}
+
+.grid-item input:active {
+  box-shadow: inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+
+/* ---------------HEADER--------------- */
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  background-image: linear-gradient(rgb(140, 40, 49), rgba(140, 40, 40, 0.9));
+}
+
+header img {
+  height: 150px;
+  width: 150px;
+  padding-right: 1rem;
+}
+
+.box-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------ASIDE--------------- */
+
+aside {
+  grid-area: aside;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-image: linear-gradient(
+    to right,
+    rgb(230, 171, 0),
+    rgba(230, 173, 0, 0.8)
+  );
+}
+
+.boxmarca {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.listfake {
+  margin-left: 2rem;
+}
+
+aside li {
+  padding-top: 5px;
+}
+
+aside i {
+  padding-left: 1rem;
+}
+
+#digitales {
+  color: rgb(140, 40, 49);
+  margin-left: 4rem;
+  font-weight: bold;
+  font-style: italic;
+}
